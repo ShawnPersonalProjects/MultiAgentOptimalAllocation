@@ -90,7 +90,7 @@ L(b) \cdot Q \le \sum_{k=1}^{b} \bigl(x_k^A F_k^A + x_k^N F_k^N + x_k^P F_k^P\bi
 $$
 
 3\. <ins>Volume Capping</ins>  
-You can also enforce an upper limit on total posted shares each bucket (e.g., for credit or risk constraints), or require that  
+You can also enforce an upper limit on total posted shares each bucket (e.g., for market impact), or require that  
 
 $$  
 x_b^A + x_b^N + x_b^P \le [max\ participation\ rate] \cdot [market\ volume] - [actual\ fill\ qty]  
