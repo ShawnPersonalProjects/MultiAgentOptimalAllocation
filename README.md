@@ -3,6 +3,12 @@
 Formulate and solve a multi‐agent allocation optimization problem that balances cost minimization, trajectory constraints, and on‐the‐fly re‐evaluation of fill rates.  
   
 The approach can be summarized as a multi‐stage optimization or a model‐predictive control (MPC) style procedure with stochastic elements to allow for exploration.  
+
+## Model predictive control  
+"The main advantage of MPC is the fact that it allows the current timeslot to be optimized, while keeping future timeslots in account. This is achieved by optimizing a finite time-horizon, but only implementing the current timeslot and then optimizing again, repeatedly, thus differing from a linear–quadratic regulator (LQR). Also MPC has the ability to anticipate future events and can take control actions accordingly."  
+  
+Ref: https://en.wikipedia.org/wiki/Model_predictive_control  
+
   
 ## Framing the problem  
   
