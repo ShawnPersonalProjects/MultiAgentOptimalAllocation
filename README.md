@@ -1,8 +1,10 @@
+# Multi-agent Trading Optimization  
+  
 Formulate and solve a multi‐agent allocation optimization problem that balances cost minimization, trajectory constraints, and on‐the‐fly re‐evaluation of fill rates.  
   
 The approach can be summarized as a multi‐stage optimization or a model‐predictive control (MPC) style procedure with stochastic elements to allow for exploration.  
   
-***Framing the problem***  
+## Framing the problem  
   
 1\. <ins>Agents</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;Aggressive (cost=2)  
@@ -67,12 +69,11 @@ The overall objective is to minimize the total cost:
 $$  
 Total Cost = ∑(b=1 to B) Cost_b.
 $$  
-
-
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
   
-***Defining constraints***  
+## Defining constraints   
   
 1\. <ins>Complete the order by the end</ins>  
 
@@ -104,13 +105,11 @@ $$
 
 5\. <ins>Re‐estimate fill rates</ins>  
 After each bucket, you re-estimate fill rates based on the actual fill ratio for each agent.  
-  
-
 &nbsp;&nbsp;&nbsp;&nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;  
   
-***Implementation Approach (Multi-Stage Optimization with Learning Programming)***  
+## Implementation Approach (Multi-Stage Optimization)   
 
 1\. <ins>Initialization</ins>  
 Set predicted fill rates for each agent for bucket 1.  
