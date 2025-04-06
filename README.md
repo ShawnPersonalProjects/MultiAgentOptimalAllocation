@@ -104,6 +104,44 @@ $$
 
 5\. <ins>Re‐estimate fill rates</ins>  
 After each bucket, you re-estimate fill rates based on the actual fill ratio for each agent.  
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+  
+***Implementation Approach (Multi-Stage Optimization with Learning Programming)***  
+
+1\. <ins>Initialization</ins>  
+Set predicted fill rates for each agent for bucket 1.  
+Define Upper and Lower Trajectory (can be updated at each bucket)  
+Define Cost function (can be updated at each bucket)  
+  
+2\. <ins>Choose Allocations</ins>  
+Use linear program to pick allocations for each agent with minimal cost subject to constraints.  
+Incorporate some random exploration to allow suboptimal solution.  
+  
+3\. <ins>End of bucket b:</ins>   
+Re-estimate the fill rates based on observed fill rates.  
+Update Cost and Trajectory for next bucket.  
+  
+4\. <ins>Repeat the sampe process until the last bucket</ins>  
+
+
+
+
+
+
+
+
+  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;  
+  
+
+
+
 
 
 
