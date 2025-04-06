@@ -1,8 +1,8 @@
-One possible way to formulate and solve this kind of multi‐agent allocation (or order‐slicing) problem that balances cost minimization, trajectory constraints, and on‐the‐fly re‐evaluation of fill rates.  
+Formulate and solve a multi‐agent allocation optimization problem that balances cost minimization, trajectory constraints, and on‐the‐fly re‐evaluation of fill rates.  
   
 The approach can be summarized as a multi‐stage optimization or a model‐predictive control (MPC) style procedure with stochastic elements to allow for exploration.  
   
-***Notation and Setup***  
+***Framing the problem***  
   
 1\. <ins>Agents</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;Aggressive (cost=2)  
@@ -72,7 +72,7 @@ $$
 
 
   
-***Main Constraints***  
+***Defining constraints***  
   
 1\. <ins>Complete the order by the end</ins>  
 
