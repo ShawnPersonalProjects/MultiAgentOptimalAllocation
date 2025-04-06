@@ -69,6 +69,7 @@ The overall objective is to minimize the total cost:
 $$  
 Total Cost = ∑(b=1 to B) Cost_b.
 $$  
+  
 &nbsp;&nbsp;&nbsp;&nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;  
