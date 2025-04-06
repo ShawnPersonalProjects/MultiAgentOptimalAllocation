@@ -25,12 +25,50 @@ $$
 0 ≤ F_b^A, F_b^N, F_b^P ≤ 1,
 $$  
 
-and these represent the fraction of posted shares expected to fill for Aggressive, Neutral, and Passive, respectively, in bucket b.  
-Re-evaluation: After each bucket completes, you see the realized fills and update your predictions for the next bucket:  
+and these represent the fraction of posted shares expected to fill for Aggressive, Neutral, and Passive, respectively, in bucket b. Re-evaluation: After each bucket completes, you see the realized fills and update your predictions for the next bucket:  
 
 $$  
 (F_{b+1}^A, F_{b+1}^N, F_{b+1}^P) ← Update\ using\ realized\ fills\ in\ bucket\ b.
 $$  
+
+5\. Trajectory Constraints  
+A typical VWAP/TWAP style constraint requires you to keep your cumulative executed quantity within an upper and lower envelope.
+  
+Let L(b) and U(b) be the fractional lower and upper bound on the cumulative fraction of Q by bucket b.   
+In each bucket b, you aim for your cumulative fills to be in:  
+
+$$  
+L(b) · Q ≤ ∑(k=1 to b) [fills in bucket k] ≤ U(b) · Q
+$$  
+
+6\. Allocation Variables:  
+  
+$$  
+x_b^A, x_b^N, x_b^P  
+$$  
+  
+be the number of shares posted by Aggressive, Neutral, and Passive, respectively, in bucket b.  
+The realized fill in bucket b for each agent is approximately:  
+
+$$
+x_b^A · F_b^A,   x_b^N · F_b^N,   x_b^P · F_b^P.
+$$  
+
+7\. Cost Function:  
+Since cost rates are 2, 1, and 0 for the three agents, cost in bucket b is:  
+
+$$  
+Cost_b = 2 x_b^A + 1 x_b^N + 0 x_b^P = 2 x_b^A + x_b^N.
+$$  
+
+The overall objective is to minimize the total cost:  
+
+$$  
+Total Cost = ∑(b=1 to B) Cost_b.
+$$  
+
+
+
 
   
 **Main Constraints**  
