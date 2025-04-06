@@ -133,6 +133,9 @@ Update Cost and Trajectory for next bucket.
   
 4\. <ins>Repeat the sampe process until the last bucket</ins>  
 
+5\. <ins>Sample Implementation using Python and PuLP</ins>  
+https://github.com/ShawnPersonalProjects/MultiAgentOptimalAllocation/blob/main/LP-Programming.ipynb  
+
 
 
 
