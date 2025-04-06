@@ -1,4 +1,4 @@
-# Multi-agent Trading Optimization  
+# Multi-agent Allocation Optimization  
   
 Formulate and solve a multi‐agent allocation optimization problem that balances cost minimization, trajectory constraints, and on‐the‐fly re‐evaluation of fill rates.  
   
